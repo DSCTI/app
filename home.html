@@ -1,0 +1,163 @@
+﻿
+
+<link rel="stylesheet"  href="css/animate.min.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<link rel="stylesheet" type="text/css" href="fonts/style2.css"/>
+<script src="js/jquery-3.5.1.min.js"></script>
+
+<script>
+
+//se não está logado redireciona para login
+var url = "http://catalogodev.damyller.com.br/ead/app/check.php";
+
+$.ajax({
+        url: url,
+        type: "GET",
+        success: function (response) {
+
+   if (response == "") { window.location.href = "login.html"; } 
+
+ } });
+
+
+//obtem o usuário logado e coloca na memória
+var url = "http://catalogodev.damyller.com.br/ead/app/get_user.php";
+
+$.ajax({
+        url: url,
+        type: "GET",
+        success: function (response) {
+
+        localStorage.setItem("user", response);
+
+ } });
+
+
+</script>
+
+<style>
+
+a {text-decoration:none;}
+
+html {
+
+background-color: #4c4177;
+background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);
+
+}
+
+form {
+background-color: #aee1f9;
+background-image: linear-gradient(315deg, #aee1f9 0%, #f6ebe6 74%);
+
+ padding:20px; border-radius:20px; }
+
+#icons {
+  background-color: white !important;
+position:fixed; bottom:0px; z-index:999; text-align:center; width:100%; margin:0px; }
+#ico {opacity:0.7; padding:7px; padding-top:0px; padding-bottom:0px; }
+
+#corpo {height:100%; max-width:480px;
+animation: fadeInDownBig; /* referring directly to the animation's @keyframe declaration */
+animation-duration: 0.6s; /* don't forget to set a duration! */
+}
+
+input[type="text"], input[type="password"] {
+  font-size: inherit;
+width:250px;
+}
+
+input {
+  -webkit-appearance: none !important;
+}
+
+
+
+
+*{ font-family:nexa !important; 
+font-size:103%; letter-spacing:0.6px;}
+html, body {color:white; padding:0px; margin:0px;}
+input {background-color:white !important; margin:4px; font-size:1.1em; padding:7px; text-align:center; height:39px; border:0px; border-radius:10px;}
+
+form {margin-top:50px; padding-top:117px; }
+
+
+</style>
+<html style="overflow: hidden;">
+<div style="width:100%;" align="center">
+
+
+<body>
+<div id="corpo" style="text-align:center; padding:18px;">
+
+
+<script>
+
+
+//obtem avatar
+var url = "https://dscti.com.br/ead/app/avatar.php";
+
+$.ajax({
+        url: url,
+        type: "GET",
+        success: function (response) {
+
+$( "#span" ).html( response );
+ }
+ });
+
+</script>
+
+
+<br><span id="span"></span>
+
+ 
+<form action="">
+   
+
+
+<font color=gray><small>
+DASHBOARD COM RESUMO DOS CURSOS EM ANDAMENTO/ CONQUISTAS / ETC
+</font></small>
+</form>
+
+
+</div>
+<div id="icons" style="padding-top:18px; padding-bottom:18px; margin-top: 1px solid #989898;" >
+<a href="home.html"><img id="ico" src="img/menu.svg" width="27">
+<a href="cursos.html"><img id="ico" src="img/aprendizagem-online.svg" width="34">
+<a href="banco.html"><img id="ico" src="img/livro.svg" width="31">
+<a href="conquistas.html"><img id="ico" src="img/conquistas.svg" width="33">
+<a href="social.html"><img id="ico" src="img/social.svg" width="32">
+<a href="ajuda.html"><img id="ico" src="img/help.svg" width="32">
+</div>
+
+<script>
+
+$( "#searchForm" ).submit(function( event ) {
+ // Stop form from submitting normally
+  event.preventDefault();
+ 
+  // Get some values from elements on the page:
+  var $form = $( this ),
+    name = $form.find( "input[name='username']" ).val(),
+    pass = $form.find( "input[name='password']" ).val(),
+    url = $form.attr( "action" );
+ 
+  // Send the data using post
+  var posting = $.post( url, { username: name, password: pass  } );
+ 
+  // Put the results in a div
+  posting.done(function( data ) {
+ 
+
+if (data != "logado") {localStorage.setItem('error', '1'); window.location.replace("login.html");} else {window.location.replace("home.html");}
+
+  });
+});
+
+$('.bubble').delay(3000).fadeIn(600);
+$('.bubble').delay(9000).fadeOut(600);
+</script>
+
+

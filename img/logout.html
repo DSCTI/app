@@ -1,0 +1,22 @@
+<script>
+
+//faz logout no wordpress
+var url = "https://dscti.com.br/ead/app/logout.php";
+
+$.ajax({
+        url: url,
+        type: "GET",
+        success: function (response) {
+
+   if (response == "logado") { window.location.href = "login.html"; } 
+
+       
+else { $( "#corpo" ).fadeIn(60); $( "#load" ).fadeOut(60); }
+ }
+
+
+    });
+
+document.write("<p id='load' align='center'><br><br><br><br><img src='img/Ripple-white.svg' width='65'>");
+
+</script>

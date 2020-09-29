@@ -1,0 +1,48 @@
+
+a {text-decoration:none;}
+
+html {
+
+background-color: #4c4177;
+background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);
+
+}
+
+#submit {font-size:0.8em !important; color:white; background-color: #4c4177;
+background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%); margin:12px; border:0px; width:120px; paddig-top:12px !important; height:38px !important;}
+
+form {
+color:black;
+background-color: #aee1f9;
+background-image: linear-gradient(315deg, #aee1f9 0%, #f6ebe6 74%);
+
+ padding:20px; }
+
+#icons {
+  background-color: white !important;
+position:fixed; bottom:0px; z-index:999; text-align:center; width:100%; margin:0px; }
+#ico {opacity:0.7; padding:7px; padding-top:0px; padding-bottom:0px; }
+
+#corpo {height:100%; max-width:480px;
+animation: fadeInDownBig; /* referring directly to the animation's @keyframe declaration */
+animation-duration: 0.6s; /* don't forget to set a duration! */
+}
+
+input[type="text"], input[type="password"] {
+  font-size: inherit;
+width:250px;
+}
+
+input {
+  -webkit-appearance: none !important;
+}
+
+
+
+
+*{ font-family:nexa !important; 
+font-size:103%; letter-spacing:0.6px;}
+html, body {color:white; padding:0px; margin:0px;}
+input {background-color:white !important; margin:4px; font-size:1.1em; padding:7px; text-align:center; height:39px; border:0px; }
+
+
