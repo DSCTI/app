@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.caleffi.dscti" version="1.1.0">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.damyller.dscti" version="0.0.1">
 
 <name>Damyller EAD</name>
 <preference name="keepRunning" value="true" />
@@ -24,11 +24,11 @@
   <param name="android-package" value="nl.xservices.plugins.Insomnia" />
 </feature>
 
-<icon src="icons/mipmap-mdpi/launcher.png" gap:platform="android" gap:density="mdpi"/>
-<icon src="icons/mipmap-hdpi/launcher.png" gap:platform="android" gap:density="hdpi" />
-<icon src="icons/mipmap-xhdpi/launcher.png" gap:platform="android" gap:density="xhdpi" />
-<icon src="icons/mipmap-xxhdpi/launcher.png" gap:platform="android" gap:density="xxhdpi" />
-<icon src="icons/mipmap-xxxhdpi/launcher.png" gap:platform="android" gap:density="xxxhdpi" />
+<icon src="icons/Icon-72.png" gap:platform="android" gap:density="mdpi"/>
+<icon src="icons/Icon-96.png" gap:platform="android" gap:density="hdpi" />
+<icon src="icons/Icon-96.png" gap:platform="android" gap:density="xhdpi" />
+<icon src="icons/Icon-144.png" gap:platform="android" gap:density="xxhdpi" />
+<icon src="icons/Icon-192.png" gap:platform="android" gap:density="xxxhdpi" />
 
 <access origin="*" />
 
