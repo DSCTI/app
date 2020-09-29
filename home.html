@@ -1,9 +1,7 @@
-﻿
-
-<link rel="stylesheet"  href="css/animate.min.css" />
+﻿<link rel="stylesheet"  href="css/animate.min.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <link rel="stylesheet" type="text/css" href="fonts/style2.css"/>
-<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/jquery.min.js"></script>
 
 <script>
 
@@ -19,7 +17,6 @@ $.ajax({
 
  } });
 
-
 //obtem o usuário logado e coloca na memória
 var url = "http://catalogodev.damyller.com.br/ead/app/get_user.php";
 
@@ -27,7 +24,6 @@ $.ajax({
         url: url,
         type: "GET",
         success: function (response) {
-
         localStorage.setItem("user", response);
 
  } });
@@ -48,9 +44,8 @@ background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);
 
 form {
 background-color: #aee1f9;
-background-image: linear-gradient(315deg, #aee1f9 0%, #f6ebe6 74%);
-
- padding:20px; border-radius:20px; }
+background-image: linear-gradient(315deg, #aee1f9 0%, #f6ebe6 74%); padding:20px;
+ }
 
 #icons {
   background-color: white !important;
@@ -77,9 +72,9 @@ input {
 *{ font-family:nexa !important; 
 font-size:103%; letter-spacing:0.6px;}
 html, body {color:white; padding:0px; margin:0px;}
-input {background-color:white !important; margin:4px; font-size:1.1em; padding:7px; text-align:center; height:39px; border:0px; border-radius:10px;}
+input {background-color:white !important; margin:4px; font-size:1.1em; padding:7px; text-align:center; height:39px; border:0px; }
 
-form {margin-top:50px; padding-top:117px; }
+form {margin-top:40px; padding-top:129px; }
 
 
 </style>
@@ -95,7 +90,7 @@ form {margin-top:50px; padding-top:117px; }
 
 
 //obtem avatar
-var url = "https://dscti.com.br/ead/app/avatar.php";
+var url = "http://catalogodev.damyller.com.br/ead/app/avatar.php";
 
 $.ajax({
         url: url,

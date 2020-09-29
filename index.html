@@ -1,8 +1,14 @@
+<script>
+//nao exibe essa tela se for desktop
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+} else { window.location.href = "login.html"; }
+</script>
+
 <html>
 
 <link rel="stylesheet"  href="css/animate.min.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<meta http-equiv="refresh" content="4;URL='login.html'" />    
+<meta http-equiv="refresh" content="3;URL='login.html'" />    
 
 <style>
 
@@ -13,7 +19,6 @@ html {
 height:auto;
 background-color: #4c4177;
 background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);
-
 
 }
 
